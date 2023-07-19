@@ -1,9 +1,14 @@
-import "./App.css";
+import { ToastContainer } from "react-toastify";
+
+import { TaskProvider } from "./hooks/useTask";
+
+import { Home } from "./pages/Home";
 
 export default function App() {
   return (
-    <h1 className="text-3xl font-bold underline text-orange-600">
-      Hello world!
-    </h1>
+    <TaskProvider>
+      <Home />
+      <ToastContainer />
+    </TaskProvider>
   );
 }
